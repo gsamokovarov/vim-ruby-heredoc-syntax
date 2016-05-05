@@ -81,6 +81,16 @@ let s:context_filetypes_ruby = {
 \     'end' : '^\s*\zsSQL$',
 \     'filetype' : 'sql',
 \   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsSHELL',
+\     'end' : '^\s*\zsSHELL$',
+\     'filetype' : 'zsh',
+\   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsSH',
+\     'end' : '^\s*\zsSH$',
+\     'filetype' : 'zsh',
+\   },
 \ ]
 \}
 
