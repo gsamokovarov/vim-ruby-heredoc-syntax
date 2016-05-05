@@ -32,6 +32,9 @@ set cpo&vim
 
 if !exists('g:ruby_heredoc_syntax_defaults')
   let g:ruby_heredoc_syntax_defaults = {
+        \ "ruby" : {
+        \   "start" : "RUBY",
+        \},
         \ "javascript" : {
         \   "start" : "JS",
         \},
@@ -53,6 +56,11 @@ endif
 
 let s:context_filetypes_ruby = {
 \ 'ruby' : [
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsRUBY',
+\     'end' : '^\s*\zsRUBY$',
+\     'filetype' : 'ruby',
+\   },
 \   {
 \     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsJS',
 \     'end' : '^\s*\zsJS$',
