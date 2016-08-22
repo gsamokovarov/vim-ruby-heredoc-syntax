@@ -47,6 +47,9 @@ if !exists('g:ruby_heredoc_syntax_defaults')
         \ "html" : {
         \   "start" : "HTML",
         \},
+        \ "css" : {
+        \   "start" : "CSS",
+        \},
   \}
 endif
 
@@ -75,6 +78,11 @@ let s:context_filetypes_ruby = {
 \     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsHTML',
 \     'end' : '^\s*\zsHTML$',
 \     'filetype' : 'html',
+\   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsCSS',
+\     'end' : '^\s*\zsCSS$',
+\     'filetype' : 'css',
 \   },
 \   {
 \     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsSQL',
